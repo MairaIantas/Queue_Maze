@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackMaze
+namespace Queue_Maze
 {
     class Program
     {

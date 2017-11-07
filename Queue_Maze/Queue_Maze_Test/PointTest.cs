@@ -1,22 +1,13 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StackMaze;
+using System.Collections.Generic;
+using Queue_Maze;
 
-namespace StackMazeTest
+namespace Queue_Maze_Test
 {
     [TestClass]
     public class PointTest
     {
-        /// <summary>
-        /// Method to test point constructor
-        /// </summary>
-        [TestMethod]
-        public void testPointConstructor()
-        {
-            Point point = new Point(0, 0);
-            Assert.IsNotNull(point);
-        }
-
         /// <summary>
         /// Method to test string method
         /// </summary>
@@ -26,5 +17,16 @@ namespace StackMazeTest
             Point point = new Point(0, 0);
             Assert.AreEqual(point.ToString(), "[0,0]");
         }
+
+        /// <summary>
+        /// Method to test string method
+        /// </summary>
+        [TestMethod]
+        public void testToStringSecondConstructor()
+        {
+            Point point = new Point(1,1,0,0);
+            Assert.AreEqual(point.ToString(), "[1,1]");
+        }
     }
+
 }

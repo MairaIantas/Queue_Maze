@@ -1,13 +1,12 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using StackMaze;
+using Queue_Maze;
 
-namespace StackMazeTest
+namespace Queue_Maze_Test
 {
     [TestClass]
     public class StackTest
     {
-
         /// <summary>
         /// Method to test constructor successful
         /// </summary>
@@ -120,3 +119,4 @@ namespace StackMazeTest
         }
     }
 }
+

@@ -4,18 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StackMaze
+namespace Queue_Maze
 {
     /// <summary>
-    /// A new class that implements the Stack methods as discussed in the lectures.
+    /// Represents a variable size last-in-first-out (LIFO) 
+    /// collection of instances of the same specified type.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">Specifies the type of elements in the stack</typeparam>
     public class Stack<T>
     {
+        #region Properties
+
         public Node<T> Head { get; set; }
         public int Size { get; set; }
         private const string MESSAGE = "No such element.";
 
+        #endregion
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
         public Stack() { }
 
         /// <summary>
@@ -56,7 +64,7 @@ namespace StackMaze
             Node<T> current;
 
             current = Head;
-            Head = Head.Previous;
+            Head = Head.Next;
             Size--;
 
             return current.Element;
